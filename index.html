@@ -209,6 +209,7 @@
             var trails = [];
             var offs1 = [+2, +1, -1, -2, +2, +1, -1, -2];
             var offs2 = [+1, +2, +2, +1, -1, -2, -2, -1];
+
             var move1 = [+1, -1, +1, -1, +1, -1, +1, -1];
             var move2 = [-1, +1, +1, -1, +1, -1, -1, +1];
             var cursor = [0, 0, 0];
@@ -535,6 +536,7 @@
                                     }
                                 }
                             }
+
                         }
                     }
                     if (AVG_TRAIL) {
@@ -668,6 +670,21 @@
                 putGrid(mesh, newxyz);
             }
 
+                function flipCell(xyz, mesh) {
+/*                if (CELL_TRAIL) {
+
+                    var voxel = new THREE.Mesh(cubette, new THREE.MeshColorFillMaterial(colors[4]));
+                    setObjPosition(voxel, oldxyz);
+                    voxel.overdraw = true;
+                    scene.addObject(voxel);
+                    trails.push(voxel);
+                    if (trails.length > CELL_TRAIL) {
+                        scene.removeObject(trails[0]);
+                        trails = trails.splice(1);
+                    }
+                    //console.log("trails:", trails.length)
+                }*/
+                //alert("flipping");
 
                 if(_3cellstate[xyz])
                 {
